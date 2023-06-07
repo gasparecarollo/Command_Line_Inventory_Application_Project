@@ -1,4 +1,6 @@
 const inform = console.log
+const { readJSONFile, writeJSONFile } = require("./src/helpers.js")
+const { index, show, create, update, destroy } = require("./src/controllers.js")
 
 
 
@@ -7,13 +9,15 @@ inform("Well uhh-come.. burp! yuck! (oh, gawd! that was 8 year old whisky I foun
 
 
 const action = process.argv[2];
-const weapons = process.argv[3];
+const weapon = process.argv[3];
+
 
 
 function run() {
     let writeToFile = false;
-    let updatedCart = [];
+    let updatedCatalog = [];
 
+    let weapons = readJSONFile("data", portalgunsandammo)
     switch (action) {
 
         case "index":
@@ -21,18 +25,29 @@ function run() {
             inform(weaponsCatalog);
             break;
 
+        case "show":
+            const viewCatalog = show(portalgunsandammo, weapon);
+            inform(weaponsCatalog);
+
         case "create":
-            updatedCart = create(portalgunsandammo, weapons);
+            updatedCatalogue = create(portalgunsandammo, weapon);
             writeToFile = true;
             break;
 
-        case "show":
-            const viewCatalog = show(portalgunsandammo, weapons);
-            inform(weaponsCatalog);
+        case "read":
 
         case "update":
+            updatedCatalogue = update(portalgunsandammo)
+            writeToFile = true;
+            break;
 
         case "destroy":
+            updatedCatalogue = destroy(portalgunsandammo, updatedCatalog)
+            writeToFile = true;
+            break;
+
+
+
 
 
 

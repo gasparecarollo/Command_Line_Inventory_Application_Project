@@ -22,6 +22,8 @@ npm install, added "Start" script, updated ReadMe, created data.json, helpers.js
 npm install jest --save-dev
 updated helpers with readFileSync/writeFileSync, readJSONFile, writeJSONFile, and imported readFileSync/writeFileSync with node:fs
 Added index, show, create, destroy, update, run function, writeToFile inside index.js
-**Create a Cart.json file
+Create a Cart.json file, created a catalogue(portalgunsandammo.json), updated package.json, and controllers.json
+Updated controllers, created shopCart.js, updated index.js, 
+removed package-lock.json from gitignore
 **Create data for the weapons
-**Update package.JSON with CRUD commands
+

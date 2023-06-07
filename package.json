@@ -11,7 +11,12 @@
     "create": "node index.js create",
     "read": "node index.js read",
     "update": "node index.js update",
-    "destroy": "node index.js destroy"
+    "destroy": "node index.js destroy",
+    "addToCart": "node shopCart.js addToCart",
+    "clearCart": "node shopCart.js clearCart",
+    "updateQuantity": "node shopCart.js updateQuantity",
+    "updateTotal": "node shopCart.js updateTotal",
+    "promo-code": "node shopCart.js promo-code"
   },
   "keywords": [],
   "author": "GASPARE CAROLLO",
