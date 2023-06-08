@@ -58,15 +58,6 @@ function update(weapons, weaponName, updatedWeapon, item_SKU, price, itemDescrip
 
     }
 
-    function addToCart() { }
-
-    function clearCart() { }
-
-    function updateQuantity() { }
-
-    function updateCart() { }
-
-    function updateTotal() { }
 
 }
 

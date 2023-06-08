@@ -23,5 +23,8 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.2"
   }
 }
