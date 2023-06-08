@@ -1,4 +1,6 @@
 const inform = console.log;
+const { readJSONFile, writeJSONFile } = require("./src/helpers");
+
 
 inform("Get Shwifty!!!")
 

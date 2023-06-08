@@ -21,39 +21,40 @@ function run() {
     switch (action) {
 
         case "index":
-            const weaponsCatalog = index(portalgunsandammo)
+            const weaponsCatalog = index(weapons)
             inform(weaponsCatalog);
             break;
 
         case "show":
-            const viewCatalog = show(portalgunsandammo, weapon);
+            const viewCatalog = show(weapons, weapon);
             inform(weaponsCatalog);
 
         case "create":
-            updatedCatalogue = create(portalgunsandammo, weapon);
+            updatedCatalog = create(weapons, weapon);
             writeToFile = true;
             break;
 
         case "read":
 
         case "update":
-            updatedCatalogue = update(portalgunsandammo)
+            updatedCatalog = update(weapons)
             writeToFile = true;
             break;
 
         case "destroy":
-            updatedCatalogue = destroy(portalgunsandammo, updatedCatalog)
+            updatedCatalog = destroy(weapons, updatedCatalog)
             writeToFile = true;
             break;
 
+        default:
+            inform("Hey, we can't do that Fam :(");
+    }
 
 
-
-
-
-
+    if (writeToFile) {
+        writeJSONFile("./data", "portalgunsandammos.json", updatedCatalog)
     }
 
 }
 
-
+run()

@@ -25,5 +25,6 @@ Added index, show, create, destroy, update, run function, writeToFile inside ind
 Create a Cart.json file, created a catalogue(portalgunsandammo.json), updated package.json, and controllers.json
 Updated controllers, created shopCart.js, updated index.js, 
 removed package-lock.json from gitignore
+Updated CRUD commands in Index, started the CRUD commands for shopCart inside Controllers.js
 **Create data for the weapons
 
