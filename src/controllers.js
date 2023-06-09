@@ -1,6 +1,6 @@
 const inform = console.log
 const { nanoid } = require("nanoid")
-const { portalgunsandammos } = require("../data/")
+const { portalGunsAndAmmo } = require("../data/portalgunsandammo.json")
 
 
 
@@ -18,7 +18,7 @@ function show(arrayOfWeapons, item_SKU) {
 function create(weapons, weaponName, item_SKU, itemDescription, price) {
     const newWeaponItem = {
         name: weaponName,
-        item_SKU: nanoid(4),
+        item_SKU: nanoid(6),
         description: portalGunsAndAmmo(weaponName),
         price: null,
         inStock: Boolean
@@ -61,4 +61,10 @@ function update(weapons, weaponName, updatedWeapon, item_SKU, price, itemDescrip
 
 }
 
-module.exports = { index, show, create, update, destroy }
+modules.export = {
+    index,
+    show,
+    create,
+    update,
+    destroy
+}

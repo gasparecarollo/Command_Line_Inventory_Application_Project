@@ -1,5 +1,5 @@
 const inform = console.log
-const { readJSONFile, writeJSONFile } = require("./src/helpers.js")
+const { readJSONFile, writeJSONFile } = require("./src/helpers")
 const { index, show, create, update, destroy } = require("./src/controllers.js")
 
 
@@ -7,17 +7,16 @@ const { index, show, create, update, destroy } = require("./src/controllers.js")
 inform("Well uhh-come.. burp! yuck! (oh, gawd! that was 8 year old whisky I found in Jerry's trophy room) to Rick and Morty's err... Smoke[yourEnemies] burp.. pffft.. Shop. ")
 
 
-
-const action = process.argv[2];
-const weapon = process.argv[3];
-
-
-
 function run() {
     let writeToFile = false;
     let updatedCatalog = [];
 
     let weapons = readJSONFile("data", portalgunsandammo)
+    console.log("Here is the data read:", weapons)
+
+    const action = process.argv[2];
+    const weapon = process.argv[3];
+
     switch (action) {
 
         case "index":

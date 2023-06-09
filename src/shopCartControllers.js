@@ -7,7 +7,17 @@ inform("Ehh, Ricky here... We've got to keep an eye out for any zany wacky chara
 
 
 
+function addToCart() {
+    let shoppingCart = [];
 
+    try {
+        shoppingCart = JSON.parse(fs.readFileSync("GetShwifty_Cart.JSON"))
+    } catch (error) {
+        console.log(error, "Ehh, Ricky here...We've got to keep an eye out for any zany wacky characters that pop up")
+    }
+
+
+}
 
 
 

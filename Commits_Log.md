@@ -13,5 +13,6 @@ Updated CRUD commands in Index, started the CRUD commands for shopCart inside Co
 Create controllers.js for shopCart, installed nanoid, created a Commits_log.md
 Fixed "node:fs" to "fs", added readCartJSON and writeCartJSON inside helpers.js
 Added module.exports for shopCartControllers.JSON, added shopCartController imports,
+Added a readJSONFile for addToCart inside shopCartControllers, npm updated by accident, npm i chalk, ERR_REQUIRE_ESM = import, uninstalled nanoid 4, and installed version Nanoid 3.3.6
 **Create data for the weapons
 **When an error is caught: Rick:  We've got to keep an eye out for any zany wacky characters that pop up
