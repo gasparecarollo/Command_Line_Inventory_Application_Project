@@ -26,18 +26,17 @@ function run() {
             break;
 
         case "show":
-            const viewCatalog = show(weapons, weapon);
+            const viewCatalog = show(weapons, weapon, item_SKU);
             inform(weaponsCatalog);
+            break;
 
         case "create":
-            updatedCatalog = create(weapons, weapon);
+            updatedCatalog = create(weapons, weapon, item_SKU);
             writeToFile = true;
             break;
 
-        case "read":
-
         case "update":
-            updatedCatalog = update(weapons)
+            updatedCatalog = update(weapons, weapon, item_SKU)
             writeToFile = true;
             break;
 

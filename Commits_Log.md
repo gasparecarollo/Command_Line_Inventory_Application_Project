@@ -11,4 +11,7 @@ Updated controllers, created shopCart.js, updated index.js,
 removed package-lock.json from gitignore
 Updated CRUD commands in Index, started the CRUD commands for shopCart inside Controllers.js
 Create controllers.js for shopCart, installed nanoid, created a Commits_log.md
+Fixed "node:fs" to "fs", added readCartJSON and writeCartJSON inside helpers.js
+Added module.exports for shopCartControllers.JSON, added shopCartController imports,
 **Create data for the weapons
+**When an error is caught: Rick:  We've got to keep an eye out for any zany wacky characters that pop up

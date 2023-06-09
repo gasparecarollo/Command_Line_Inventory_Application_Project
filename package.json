@@ -16,7 +16,7 @@
     "clearCart": "node shopCart.js clearCart",
     "updateQuantity": "node shopCart.js updateQuantity",
     "updateTotal": "node shopCart.js updateTotal",
-    "promo-code": "node shopCart.js promo-code"
+    "promoCode": "node shopCart.js promo-code"
   },
   "keywords": [],
   "author": "GASPARE CAROLLO",

@@ -1,12 +1,12 @@
 const inform = console.log
 const { nanoid } = require("nanoid")
-const { GetShwifty_Cart } = require("../data/GetShwifty_Cart.json")
+const { portalgunsandammos } = require("../data/")
 
 
 
 
 function index(arrayOfWeapons) {
-    arrayOfWeapons.map((eachWeapon) => "item": eachWeapon.name, + " " + "description": eachWeapon.description + " " + "price": eachWeapon.priceInCents + " " + "inStock": eachWeapon.inStock).join("/n")
+    arrayOfWeapons.map((eachWeapon) => `item: ${eachWeapon.name}, + " " + description: ${eachWeapon.description} + " " + price: ${eachWeapon.priceInCents} + " " + inStock: ${eachWeapon.inStock}`)
 
 }
 
@@ -15,13 +15,13 @@ function show(arrayOfWeapons, item_SKU) {
     return weaponItemToFind.id + " " + weaponItemToFind.name + " " + weaponItemToFind.description + " " + weaponItemToFind.priceInCents + " " + weaponItemToFind.inStock;
 }
 
-function create(weapons, weaponName, item_SKU, itemDescription, price,) {
+function create(weapons, weaponName, item_SKU, itemDescription, price) {
     const newWeaponItem = {
         name: weaponName,
-        id: nanoid(4),
+        item_SKU: nanoid(4),
         description: portalGunsAndAmmo(weaponName),
         price: null,
-        inStock: null
+        inStock: Boolean
 
     };
     weapons.push(newWeaponItem)

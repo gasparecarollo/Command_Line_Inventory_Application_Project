@@ -1,5 +1,5 @@
-const fs = require("node: fs")
-const { readFileSync, writeFileSync } = require("node:fs")
+const fs = require("fs")
+const { readFileSync, writeFileSync } = require("fs")
 
 
 
@@ -16,7 +16,24 @@ function writeJSONFile(path, fileName, data) {
     return writeFileSync(`${path}/${fileName}`, data, { encoding: "utf-8" })
 }
 
+function readCartJSON(path, fileName) {
+
+    const cart = readFileSync(`${path}/${fileName}`, "utf-8")
+    return cart ? JSON.parse(cart) : []
+}
+
+function writeCartJSON(path, fileName, cartData) {
+
+    cartData = JSON.stringify(cartData)
+    return writeFileSync(`${path}/${fileName}`, cartData, { encoding: "utf-8" })
+
+
+}
+
 module.exports = {
     readJSONFile,
-    writeJSONFile
+    writeJSONFile,
+    readCartJSON,
+    writeCartJSON
+
 }
