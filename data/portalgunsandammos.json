@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Gaspare",
+        "description": "Born in Brooklyn",
+        "price": "5",
+        "inStock": "true",
+        "availableInYourDimension": "true",
+        "item_SKU": "bJ_63V"
+    },
+    {
+        "name": "Gaspare",
+        "description": "Born in Brooklyn",
+        "price": "5",
+        "inStock": "true",
+        "availableInYourDimension": "true",
+        "item_SKU": "UHgUoL"
+    },
+    {
+        "name": "Gaspare",
+        "description": "Born in Brooklyn",
+        "price": "true",
+        "inStock": "true",
+        "item_SKU": "N4hd9O"
+    },
+    {
+        "name": "Gaspare",
+        "description": "Born in Brooklyn",
+        "price": "true",
+        "inStock": "true",
+        "item_SKU": "IJ0VUN"
+    }
+]

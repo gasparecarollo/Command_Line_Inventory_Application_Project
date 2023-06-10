@@ -11,11 +11,19 @@ function run() {
     let writeToFile = false;
     let updatedCatalog = [];
 
-    let weapons = readJSONFile("data", portalgunsandammo)
+    let weapons = readJSONFile("data", "portalgunsandammos.JSON")
     console.log("Here is the data read:", weapons)
 
     const action = process.argv[2];
     const weapon = process.argv[3];
+    const description = process.argv[4];
+    const price = process.argv[5];
+    const inStock = process.argv[6];
+    const availableInYourDimension = process.argv[7];
+    const item_SKU = process.argv[8];
+
+
+
 
     switch (action) {
 
@@ -25,12 +33,12 @@ function run() {
             break;
 
         case "show":
-            const viewCatalog = show(weapons, weapon, item_SKU);
+            const viewCatalog = show(weapon, item_SKU);
             inform(weaponsCatalog);
             break;
 
         case "create":
-            updatedCatalog = create(weapons, weapon, item_SKU);
+            updatedCatalog = create(weapons, weapon, description, inStock, availableInYourDimension);
             writeToFile = true;
             break;
 
@@ -40,12 +48,12 @@ function run() {
             break;
 
         case "destroy":
-            updatedCatalog = destroy(weapons, updatedCatalog)
+            updatedCatalog = destroy(weapon, item_SKU, updatedCatalog)
             writeToFile = true;
             break;
 
         default:
-            inform("Hey, we can't do that Fam :(");
+            inform("When an error is caught: Rick: We've got to keep an eye out for any zany wacky characters that pop up");
     }
 
 

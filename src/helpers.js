@@ -12,7 +12,7 @@ function readJSONFile(path, fileName) {
 
 function writeJSONFile(path, fileName, data) {
 
-    data = JSON.stringify(data)
+    data = JSON.stringify(data, null, 2)
     return writeFileSync(`${path}/${fileName}`, data, { encoding: "utf-8" })
 }
 
@@ -24,7 +24,7 @@ function readCartJSON(path, fileName) {
 
 function writeCartJSON(path, fileName, cartData) {
 
-    cartData = JSON.stringify(cartData)
+    cartData = JSON.stringify(cartData, null, 2)
     return writeFileSync(`${path}/${fileName}`, cartData, { encoding: "utf-8" })
 
 
