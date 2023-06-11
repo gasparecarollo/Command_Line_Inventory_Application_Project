@@ -33,22 +33,22 @@ function run() {
             break;
 
         case "show":
-            const viewCatalog = show(weapon, item_SKU);
-            inform(weaponsCatalog);
+            const viewCatalog = show(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU);
+            inform(viewCatalog);
             break;
 
         case "create":
-            updatedCatalog = create(weapons, weapon, description, inStock, availableInYourDimension);
+            updatedCatalog = create(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU);
             writeToFile = true;
             break;
 
         case "update":
-            updatedCatalog = update(weapons, weapon, item_SKU)
+            updatedCatalog = update(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU)
             writeToFile = true;
             break;
 
         case "destroy":
-            updatedCatalog = destroy(weapon, item_SKU, updatedCatalog)
+            updatedCatalog = destroy(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU)
             writeToFile = true;
             break;
 
