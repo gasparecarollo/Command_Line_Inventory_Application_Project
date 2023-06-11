@@ -12,9 +12,9 @@ function index(arrayOfWeapons) {
 
 }
 
-function show(weapons, item_SKU) {
-    const weaponItemToFind = weapons.find((weaponItem) => weaponItem.id === item_SKU)
-    return weaponItemToFind.name + " " + weaponItemToFind.description + " " + weaponItemToFind.price + " " + faker.datatype.boolean + faker.datatype.boolean + " " + weaponItemToFind.id;
+function show(weapons, weaponId) {
+    const weaponItemToFind = weapons.find((weaponItem) => weaponItem.id === weaponId)
+    return weaponItemToFind.name + " " + weaponItemToFind.description + " " + weaponItemToFind.price + " " + weaponItemToFind.inStock + weaponItemToFind.availableInYourDimension + " " + weaponItemToFind.item_SKU;
 }
 
 function create(weapons, weaponName, description, number, inStock, availableInYourDimension, item_SKU) {
@@ -22,21 +22,36 @@ function create(weapons, weaponName, description, number, inStock, availableInYo
         name: weaponName,
         description: description,
         price: number,
-        inStock: inStock,
-        availableInYourDimension: availableInYourDimension,
+        inStock: faker.datatype.boolean,
+        availableInYourDimension: faker.datatype.boolean,
         item_SKU: nanoid(6)
     };
     weapons.push(newWeaponItem)
     return weapons;
 
 }
-//&& weapon.name === weaponName
-function update(weapons, weaponName, item_SKU, price, itemDescription, inStock) {
+
+function destroy(weapons, weaponId) {
+    const item_SKU = process.argv[8];
+    //const weaponProduct = readJSONFile()
+    const index = weapons.findIndex((weapon) => weapon.id === weaponId);
+    if (index > -1) {
+        weapons.splice(index, 1);
+        //writeJSONFile(weapons)
+        inform(`Weapon Item with SKU# ${weaponId} was successfully removed from the PortalGunsAndAmmo Catalog`)
+        return weapons;
+    } else {
+        inform("Weapon Item not found. No action taken")
+        return weapons;
+    }
+    //&& weapon.name === weaponName
+}
+function update(weapons, weaponName, updatedWeapon, item_SKU, price, itemDescription, inStock) {
     const index = weapons.findIndex((weapon) => weapon.id === item_SKU && weapon.name === weaponName);
 
     if (index === -1) {
         weapons[index].id === item_SKU;
-        weapons[index].name === weaponName;
+        weapons[index].name === updatedWeapon;
         weapons[index].priceInCents === price;
         weapons[index].inStock === inStock;
         weapons[index].description === itemDescription;
@@ -47,21 +62,7 @@ function update(weapons, weaponName, item_SKU, price, itemDescription, inStock) 
         return weapons;
 
     }
-}
 
-function destroy(weapons, item_SKU) {
-    // const item_SKU = process.argv[8];
-    // const weaponProduct = readJSONFile()
-    const index = weapons.findIndex((weapon) => weapon.id === item_SKU);
-    if (index > -1) {
-        weapons.splice(index, 1);
-        writeJSONFile(weapons)
-        inform(`Weapon Item with SKU# ${weaponId} was successfully removed from the PortalGunsAndAmmo Catalog`)
-        return weapons;
-    } else {
-        inform("Weapon Item not found. No action taken")
-        return weapons;
-    }
 
 }
 
