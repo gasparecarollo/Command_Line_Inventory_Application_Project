@@ -45,11 +45,13 @@ function run() {
         case "update":
             updatedCatalog = update(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU)
             writeToFile = true;
+            inform(updatedCatalog)
             break;
 
         case "destroy":
             updatedCatalog = destroy(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU)
             writeToFile = true;
+            inform(updatedCatalog)
             break;
 
         default:

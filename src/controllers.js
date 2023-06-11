@@ -2,6 +2,7 @@ const inform = console.log
 const { nanoid } = require("nanoid")
 const { portalGunsAndAmmo } = require("../data/portalgunsandammos.json")
 const { writeJSONFile } = require("./helpers")
+const { faker } = require("@faker-js/faker")
 
 
 
@@ -13,7 +14,7 @@ function index(arrayOfWeapons) {
 
 function show(weapons, item_SKU) {
     const weaponItemToFind = weapons.find((weaponItem) => weaponItem.id === item_SKU)
-    return weaponItemToFind.name + " " + weaponItemToFind.description + " " + weaponItemToFind.price + " " + weaponItemToFind.faker.datatype.boolean + weaponItemToFind.faker.datatype.boolean + " " + weaponItemToFind.item_SKU;
+    return weaponItemToFind.name + " " + weaponItemToFind.description + " " + weaponItemToFind.price + " " + faker.datatype.boolean + faker.datatype.boolean + " " + weaponItemToFind.id;
 }
 
 function create(weapons, weaponName, description, number, inStock, availableInYourDimension, item_SKU) {
