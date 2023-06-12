@@ -16,11 +16,12 @@ function run() {
 
     const action = process.argv[2];
     const weapon = process.argv[3];
-    const description = process.argv[4];
-    const price = process.argv[5];
-    const inStock = process.argv[6];
-    const availableInYourDimension = process.argv[7];
-    const item_SKU = process.argv[8];
+    const item_SKU = process.argv[4];
+    const description = process.argv[5];
+    const price = process.argv[6];
+    const inStock = process.argv[7];
+    const availableInYourDimension = process.argv[8];
+
 
 
 

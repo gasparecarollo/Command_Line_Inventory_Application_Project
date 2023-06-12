@@ -3,6 +3,7 @@ const { nanoid } = require("nanoid")
 const { portalGunsAndAmmo } = require("../data/portalgunsandammos.json")
 const { writeJSONFile } = require("./helpers")
 const { faker } = require("@faker-js/faker")
+const chalk = require("chalk")
 
 
 
@@ -12,9 +13,14 @@ function index(arrayOfWeapons) {
 
 }
 
-function show(weapons, weaponId) {
+function show(weapons, item, weaponId) {
     const weaponItemToFind = weapons.find((weaponItem) => weaponItem.id === weaponId)
-    return weaponItemToFind.name + " " + weaponItemToFind.description + " " + weaponItemToFind.price + " " + weaponItemToFind.inStock + weaponItemToFind.availableInYourDimension + " " + weaponItemToFind.item_SKU;
+    let stockItems = weapons.filter((stock) => stock[item] === item)
+    let totalItems = " "
+    for (let whatsInStock of stockItems) {
+        return `${chalk.green(whatsInStock.item_SKU)} ${chalk.yellow(whatsInStock.name)} $${chalk.yellowBright(whatsInStock.price.toFixed(2))} ${chalk.redBright(whatsInStock.instock)} ${chalk.magenta(whatsInStock.availableInYourDimension)}`
+    }
+    return totalItems;
 }
 
 function create(weapons, weaponName, description, number, inStock, availableInYourDimension, item_SKU) {
@@ -22,8 +28,8 @@ function create(weapons, weaponName, description, number, inStock, availableInYo
         name: weaponName,
         description: description,
         price: number,
-        inStock: faker.datatype.boolean,
-        availableInYourDimension: faker.datatype.boolean,
+        inStock: true,
+        availableInYourDimension: true,
         item_SKU: nanoid(6)
     };
     weapons.push(newWeaponItem)
@@ -32,13 +38,10 @@ function create(weapons, weaponName, description, number, inStock, availableInYo
 }
 
 function destroy(weapons, weaponId) {
-    const item_SKU = process.argv[8];
-    //const weaponProduct = readJSONFile()
     const index = weapons.findIndex((weapon) => weapon.id === weaponId);
     if (index > -1) {
         weapons.splice(index, 1);
-        //writeJSONFile(weapons)
-        inform(`Weapon Item with SKU# ${weaponId} was successfully removed from the PortalGunsAndAmmo Catalog`)
+        inform("Ughhh... another irritating pocket Morty removed from the intergalactic dimension")
         return weapons;
     } else {
         inform("Weapon Item not found. No action taken")
@@ -51,14 +54,14 @@ function update(weapons, weaponName, updatedWeapon, item_SKU, price, itemDescrip
 
     if (index === -1) {
         weapons[index].id === item_SKU;
-        weapons[index].name === updatedWeapon;
+        weapons[index].name === weaponName;
         weapons[index].priceInCents === price;
         weapons[index].inStock === inStock;
         weapons[index].description === itemDescription;
         inform("Weapons Catalog successfully updated!")
         return weapons;
     } else {
-        inform("Weapon Item Not Found. No action taken!")
+        inform("There’s a lesson here, and I’m not going to be the one to figure it out. — Rick")
         return weapons;
 
     }

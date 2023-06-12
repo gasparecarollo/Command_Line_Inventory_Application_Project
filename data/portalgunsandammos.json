@@ -1,8 +1,38 @@
 [
   {
-    "name": "The Gaspare,",
-    "description": "Sucks at Code,",
-    "price": "87",
-    "item_SKU": "yjodPb"
+    "name": "Gaspare,",
+    "description": "Born in Brooklyn,",
+    "price": "67,",
+    "item_SKU": "rH3GdZ"
+  },
+  {
+    "name": "Portal gun,",
+    "description": "Shoots lasers,",
+    "price": "87,",
+    "item_SKU": "zheBIf"
+  },
+  {
+    "name": "Gaspare,",
+    "description": "jkahkhdkjhakhdajkhda,",
+    "price": "67,",
+    "inStock": "",
+    "availableInYourDimension": "",
+    "item_SKU": "vJT-85"
+  },
+  {
+    "name": "ajajajaj,",
+    "description": "kakjsjsjs,",
+    "price": "76,",
+    "inStock": null,
+    "availableInYourDimension": null,
+    "item_SKU": "MxtC-d"
+  },
+  {
+    "name": "hkkahhkahhka,",
+    "description": "haghagjgajaj,",
+    "price": "76,",
+    "inStock": null,
+    "availableInYourDimension": null,
+    "item_SKU": "eO7OjE"
   }
 ]

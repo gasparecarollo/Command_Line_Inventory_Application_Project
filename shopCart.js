@@ -13,11 +13,11 @@ function run() {
     let writeToCart = false;
     let updatedCart = [];
 
-    let itemsInCart = readJSONFile("data", getShwifty_Cart)
+    let itemsInCart = readJSONFile("data", "getShwifty_Cart.JSON")
     switch (action) {
 
         case "addToCart":
-            const addToCart = addToCart(item)
+            const addToCart = addToCart(item, item_SKU)
             writeToFile = true;
             break;
 
