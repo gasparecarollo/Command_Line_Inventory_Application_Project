@@ -7,37 +7,38 @@ inform("Get Shwifty!!!")
 const action = process.argv[2];
 const item = process.argv[3];
 const item_SKU = process.argv[4];
+const weaponName = process.argv[5];
 
 
 function run() {
     let writeToCart = false;
     let updatedCart = [];
 
-    let itemsInCart = readJSONFile("data", "getShwifty_Cart.JSON")
+    let itemsInCart = readCartJSON("data", "getShwifty_Cart.JSON")
     switch (action) {
 
         case "addToCart":
-            const addToCart = addToCart(item, item_SKU)
+            const addToCart = addToCart(item, item_SKU, itemsInCart)
             writeToFile = true;
             break;
 
         case "clearCart":
-            const clearCart = clearCart(item)
+            const clearCart = clearCart(item, itemsInCart)
             writeToFile = true;
             break;
 
         case "updateQuantity":
-            const updateQuantity = updateQuantity(item)
+            const updateQuantity = updateQuantity(item, itemsInCart)
             writeToFile = true;
             break;
 
         case "updateTotal":
-            const updateTotal = updateTotal(item)
+            const updateTotal = updateTotal(item, itemsInCart)
             writeToFile = true;
             break;
 
         case "promoCode":
-            const promoCode = promoCode(item)
+            const promoCode = promoCode(item, itemsInCart)
             writeToFile = true;
             break;
 
@@ -45,7 +46,7 @@ function run() {
     }
 
     if (writeToFile) {
-        writeJSONFile("./data", "GetShwifty_Cart.json", updatedCatalog)
+        writeCartJSON("./data", "GetShwifty_Cart.json", updatedCatalog)
     }
 
 

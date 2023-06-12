@@ -21,7 +21,8 @@ function run() {
     const price = process.argv[6];
     const inStock = process.argv[7];
     const availableInYourDimension = process.argv[8];
-
+    const weaponName = process.argv[9];
+    const weaponId = process.argv[10];
 
 
 
@@ -50,13 +51,13 @@ function run() {
             break;
 
         case "destroy":
-            updatedCatalog = destroy(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU)
+            updatedCatalog = destroy(weapons, weapon, weaponName, weaponId, item_SKU)
             writeToFile = true;
-            inform(updatedCatalog)
+            inform("You've removed one irritating pocket Morty from this GodForSaken intergalactic dimension", updatedCatalog)
             break;
 
         default:
-            inform("When an error is caught: Rick: We've got to keep an eye out for any zany wacky characters that pop up");
+            inform("Rick: We've got to keep an eye out for any zany wacky characters that pop up");
     }
 
 

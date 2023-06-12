@@ -1,38 +1,50 @@
 [
   {
-    "name": "Gaspare,",
-    "description": "Born in Brooklyn,",
-    "price": "67,",
-    "item_SKU": "rH3GdZ"
+    "name": "Summoned Katana",
+    "description": "Summoned Katana is a Rare Harvesting Tool in Fortnite: Battle Royale, that can be purchased in the Item Shop for  800 V-Bucks or with the Mr. Meeseeks Bundle for  2,100 V-Bucks. Summoned Katana was first released in Chapter 3: Season 4 and is part of the Mr. Meeseeks Set.",
+    "price": 800,
+    "inStock": true,
+    "availableInYourDimension": true,
+    "item_SKU": "1RhZST"
   },
   {
-    "name": "Portal gun,",
-    "description": "Shoots lasers,",
-    "price": "87,",
-    "item_SKU": "zheBIf"
+    "name": "Neutrino Bomb",
+    "description": "The Neutrino Bomb is a powerful bomb invented by Rick Sanchez that could potentially wipe out all life on Earth and other planets.",
+    "price": 1600,
+    "inStock": true,
+    "availableInYourDimension": true,
+    "item_SKU": "-DnpYR"
   },
   {
-    "name": "Gaspare,",
-    "description": "jkahkhdkjhakhdajkhda,",
-    "price": "67,",
-    "inStock": "",
-    "availableInYourDimension": "",
-    "item_SKU": "vJT-85"
+    "name": "Laser Gun",
+    "description": "Rick's laser gun (sometimes referred to as ray gun or laser pistol), is a firearm owned and commonly in the possession of Rick Sanchez. It is a magazine-fed, semi-automatic/channeled, directed-energy weapon presumably of Rick's own design. For the first two seasons it is Rick's main weapon of choice against most humanoid threats.",
+    "price": 2833,
+    "inStock": true,
+    "availableInYourDimension": true,
+    "item_SKU": "eOZ_BJ"
   },
   {
-    "name": "ajajajaj,",
-    "description": "kakjsjsjs,",
-    "price": "76,",
-    "inStock": null,
-    "availableInYourDimension": null,
-    "item_SKU": "MxtC-d"
+    "name": "Portal pistol",
+    "description": "The Portal Pistol is a gadget that allows the user(s) to travel between different universes/dimensions/realities. The device was likely created by the Dinosaurs.",
+    "price": 2379,
+    "inStock": true,
+    "availableInYourDimension": true,
+    "item_SKU": "hMWPoE"
   },
   {
-    "name": "hkkahhkahhka,",
-    "description": "haghagjgajaj,",
-    "price": "76,",
-    "inStock": null,
-    "availableInYourDimension": null,
-    "item_SKU": "eO7OjE"
+    "name": "Pulse Rifle",
+    "description": "Pulse Rifles were Galactic Federation-standard military rifles used by Gromflomite soldiers. They were first seen in the episode Pilot, where Rick and Morty were attacked by Gromflomite Guards wielding the rifles.",
+    "price": 1257,
+    "inStock": true,
+    "availableInYourDimension": true,
+    "item_SKU": "yGpyFJ"
+  },
+  {
+    "name": "yayyaya",
+    "description": "kakakkak",
+    "price": ",",
+    "inStock": true,
+    "availableInYourDimension": true,
+    "item_SKU": "O88DMz"
   }
 ]
