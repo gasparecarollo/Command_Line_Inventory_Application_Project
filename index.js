@@ -1,6 +1,6 @@
 const inform = console.log
 const { readJSONFile, writeJSONFile } = require("./src/helpers")
-const { index, show, create, update, destroy } = require("./src/controllers.js")
+const { index, show, create, destroy, edit } = require("./src/controllers.js")
 
 
 
@@ -15,14 +15,13 @@ function run() {
     console.log("Here is the data read:", weapons)
 
     const action = process.argv[2];
-    const weapon = process.argv[3];
+    const weaponName = process.argv[3];
     const item_SKU = process.argv[4];
     const description = process.argv[5];
     const price = process.argv[6];
     const inStock = process.argv[7];
     const availableInYourDimension = process.argv[8];
-    const weaponName = process.argv[9];
-    const weaponId = process.argv[10];
+
 
 
 
@@ -35,23 +34,23 @@ function run() {
             break;
 
         case "show":
-            const viewCatalog = show(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU);
+            const viewCatalog = show(weapons, weaponName, item_SKU, description, price, inStock, availableInYourDimension);
             inform(viewCatalog);
             break;
 
         case "create":
-            updatedCatalog = create(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU);
+            updatedCatalog = create(weapons, weaponName, item_SKU, description, price, inStock, availableInYourDimension);
             writeToFile = true;
             break;
 
         case "update":
-            updatedCatalog = update(weapons, weapon, description, price, inStock, availableInYourDimension, item_SKU)
+            updatedCatalog = edit(weapons, weaponName, item_SKU, description, price, inStock, availableInYourDimension)
             writeToFile = true;
             inform(updatedCatalog)
             break;
 
         case "destroy":
-            updatedCatalog = destroy(weapons, weapon, weaponName, weaponId, item_SKU)
+            updatedCatalog = destroy(weapons, weaponName)
             writeToFile = true;
             inform("You've removed one irritating pocket Morty from this GodForSaken intergalactic dimension", updatedCatalog)
             break;
@@ -68,3 +67,13 @@ function run() {
 }
 
 run()
+
+
+
+module.exports = {
+    index,
+    create,
+    show,
+    edit,
+    destroy
+}
